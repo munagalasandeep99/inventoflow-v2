@@ -8,10 +8,10 @@ import { AIInsights } from '../components/ai/AIInsights';
 
 const StatCard: React.FC<{ title: string; value: string; icon: React.ReactNode }> = ({ title, value, icon }) => (
     <div className="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
-        <div className="bg-primary/10 text-primary p-3 rounded-full">{icon}</div>
-        <div>
-            <p className="text-sm text-gray-500">{title}</p>
-            <p className="text-2xl font-bold text-secondary">{value}</p>
+        <div className="bg-primary/10 text-primary p-3 rounded-full flex-shrink-0">{icon}</div>
+        <div className="min-w-0 flex-1">
+            <p className="text-sm text-gray-500 truncate">{title}</p>
+            <p className="text-2xl font-bold text-secondary break-words">{value}</p>
         </div>
     </div>
 );
