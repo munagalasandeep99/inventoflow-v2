@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import { LogoutIcon, ChevronDownIcon, MenuIcon } from './Icons';
@@ -23,7 +22,7 @@ const HorizontalNav: React.FC<HorizontalNavProps> = ({ onMenuClick }) => {
   }, []);
 
   return (
-    <header className="h-20 bg-white border-b border-gray-200 flex items-center justify-between px-4 sm:px-6 lg:px-8 shrink-0">
+    <header className="h-20 bg-white border-b border-gray-200 flex items-center px-4 sm:px-6 lg:px-8 shrink-0">
       <button 
         onClick={onMenuClick}
         className="md:hidden p-2 -ml-2 rounded-md text-gray-500 hover:text-primary hover:bg-gray-100"
@@ -32,9 +31,7 @@ const HorizontalNav: React.FC<HorizontalNavProps> = ({ onMenuClick }) => {
         <MenuIcon className="h-6 w-6" />
       </button>
 
-      <div className="flex-grow md:hidden"></div>
-
-      <div className="relative" ref={dropdownRef}>
+      <div className="relative ml-auto" ref={dropdownRef}>
         <button
           onClick={() => setDropdownOpen(!dropdownOpen)}
           className="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100 transition-colors"
