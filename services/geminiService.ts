@@ -2,8 +2,7 @@
 import { GoogleGenAI } from "@google/genai";
 import { InventoryItem } from '../types';
 
-const apiKey = process.env.API_KEY;
-
+const apiKey = "AIzaSyCIhBSAinrslphItiVw1dv2nnyYrDwEcaw";
 if (!apiKey) {
     console.error("Gemini API key not found. Please set the GEMINI_API_KEY environment variable.");
 }
