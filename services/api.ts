@@ -91,13 +91,11 @@ export async function updateItem(itemData: Partial<InventoryItem> & { itemId: st
 // Delete an inventory item
 export async function deleteItem(itemId: string): Promise<any> {
   const authHeader = await getAuthHeader();
-  const response = await fetch(`${API_ENDPOINT}/items`, {
+  const response = await fetch(`${API_ENDPOINT}/items?itemId=${itemId}`, {
     method: 'DELETE',
     headers: {
-        ...authHeader,
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ itemId: itemId })
+        ...authHeader
+    }
   });
   return handleApiResponse(response);
 }
